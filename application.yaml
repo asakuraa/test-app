@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: TestApp
+  name: test-app
 spec:
   destination:
     name: my-demo-app
