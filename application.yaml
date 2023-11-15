@@ -10,7 +10,7 @@ spec:
     path: demo
     repoURL: https://github.com/asakuraa/test-app.git
     targetRevision: HEAD
-  project: demo-project
+  project: default
   syncPolicy:
     automated:
       prune: true
