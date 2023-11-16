@@ -3,16 +3,16 @@ kind: Ingress
 metadata:
   name: mongo-express-ingress
   annotations:
-    nginx.org/rewrites: "serviceName=mongo-express-service rewrite=/;"
-    ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: nginx
   rules:
   - host: express.example.com
     http:
       paths:
-      - path: /express
-        pathType: Prefix
+      - path: /express(/|$)(.*)
+        pathType: ImplementationSpecific
         backend:
           service:
             name: mongo-express-service
