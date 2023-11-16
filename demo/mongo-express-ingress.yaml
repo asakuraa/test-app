@@ -7,10 +7,10 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: express.example.com/
+  - host: express.example.com
     http:
       paths:
-      - path: /express/
+      - path: /express
         pathType: Prefix
         backend:
           service:
