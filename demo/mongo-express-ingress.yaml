@@ -4,6 +4,7 @@ metadata:
   name: mongo-express-ingress
   annotations:
     nginx.org/rewrites: "serviceName=mongo-express-service rewrite=/;"
+    ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
