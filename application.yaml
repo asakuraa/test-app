@@ -8,7 +8,7 @@ spec:
     server: https://kubernetes.default.svc
   source:
     path: demo
-    repoURL: https://github.com/asakuraa/test-app.git
+    repoURL: file:///home/thbkkisigroup/test-app
     targetRevision: HEAD
   project: default
   syncPolicy:
