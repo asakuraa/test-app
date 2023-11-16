@@ -3,14 +3,13 @@ kind: Ingress
 metadata:
   name: mongo-express-ingress
   annotations:
-    IngressClass: nginx
+    nginx.org/rewrites: "serviceName=mongo-express-service rewrite=/;"
 spec:
-  IngressClassName: nginx
   rules:
   - host: express.example.com
     http:
       paths:
-      - path: /
+      - path: /express/
         pathType: Prefix
         backend:
           service:
